@@ -1,0 +1,32 @@
+Algorithme Phrase
+
+VAR
+    c : caractère
+    longueur, mots, voyelles : entier
+
+DEBUT
+    longueur := 0
+    mots := 1
+    voyelles := 0
+
+    Lire(c)
+
+    TANT QUE c <> '.' FAIRE
+        longueur := longueur + 1
+
+        SI c = ' ' ALORS
+            mots := mots + 1
+        FIN SI
+
+        SI c = 'a' OU c = 'e' OU c = 'i' OU c = 'o' OU c = 'u' OU c = 'y' ALORS
+            voyelles := voyelles + 1
+        FIN SI
+
+        Lire(c)
+    FIN TANT QUE
+
+    Écrire("Longueur = ", longueur)
+    Écrire("Mots = ", mots)
+    Écrire("Voyelles = ", voyelles)
+
+FIN
